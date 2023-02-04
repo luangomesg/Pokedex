@@ -99,6 +99,25 @@ body {
     height: 40%;
     background-color: rgb(93, 0, 0);
     border-radius: 10px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.info-one {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+}
+
+.info-two {
+    display: flex;
+    width: 50%;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
 

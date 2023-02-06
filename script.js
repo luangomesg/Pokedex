@@ -12,12 +12,20 @@ let def = document.querySelector(".def");
 let satk = document.querySelector(".satk");
 let sdef = document.querySelector(".sdef");
 let speed = document.querySelector(".speed");
+let btnShiny = document.querySelector(".btn-shiny");
+
 
 btn.addEventListener("click", () => {
+    
     let pokemon = input.value;
-    console.log(pokemon);
     callPokemon(pokemon)
+    input.value = "";
 })
+
+
+
+
+
 
 function callPokemon(pokemon) {
     let requisition = fetch(url + pokemon).then(response => response.json()).catch((error) => { console.log(error) })
@@ -28,6 +36,7 @@ function callPokemon(pokemon) {
         data.types.map((type) => {
             types.push(type.type.name)
         });
+
         tipo.innerHTML = `<p> Tipo: ${types.join(", ")} </p>`;
         console.log(data)
         img.src = data.sprites.other["official-artwork"].front_default;
@@ -42,8 +51,21 @@ function callPokemon(pokemon) {
         satk.innerHTML = "S-ATK: " + data.stats[3].base_stat;
         sdef.innerHTML = "S-DEF: " + data.stats[4].base_stat;
         speed.innerHTML = "SPEED: " + data.stats[5].base_stat;
+        
+        
     })
+    
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

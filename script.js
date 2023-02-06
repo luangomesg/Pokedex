@@ -6,6 +6,12 @@ let tipo = document.querySelector(".tipo");
 let img = document.querySelector(".img");
 let peso = document.querySelector(".peso");
 let habili = document.querySelector(".habilidades");
+let hp = document.querySelector(".hp");
+let atk = document.querySelector(".atk");
+let def = document.querySelector(".def");
+let satk = document.querySelector(".satk");
+let sdef = document.querySelector(".sdef");
+let speed = document.querySelector(".speed");
 
 btn.addEventListener("click", () => {
     let pokemon = input.value;
@@ -30,7 +36,12 @@ function callPokemon(pokemon) {
             abilities.push(abl.ability.name)
         })
         habili.innerHTML = `Habilidades: ${abilities.join(", ")}`
-
+        hp.innerHTML = "HP: " + data.stats[0].base_stat;
+        atk.innerHTML = "ATK: " + data.stats[1].base_stat;
+        def.innerHTML = "DEF: " + data.stats[2].base_stat;
+        satk.innerHTML = "S-ATK: " + data.stats[3].base_stat;
+        sdef.innerHTML = "S-DEF: " + data.stats[4].base_stat;
+        speed.innerHTML = "SPEED: " + data.stats[5].base_stat;
     })
 }
 

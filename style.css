@@ -173,8 +173,42 @@ body {
     height: 20%;
     justify-content: center;
     align-items: center;
-    margin-left: -10px;
+    
     margin-bottom: 10px;
+    
+}
+
+
+@media (max-height: 655px) {
+
+    .input {
+        padding: 2px;
+    }
+    .btn {
+        padding: 2px;
+    }
+
+    .info-one p {
+        font-size: 10px;
+    }
+
+    .info-two p {
+        font-size: 10px;
+    }
+
+    .inbtn {
+        align-items: start;
+        
+    }
+
+    
+}
+
+@media (max-height: 610px) {
+
+    .container-info {
+        height: 35%;
+    }
     
 }
 

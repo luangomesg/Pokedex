@@ -27,9 +27,8 @@ btn.addEventListener("click", () => {
 
 
 
-function callPokemon(pokemon) {
-    let requisition = fetch(url + pokemon).then(response => response.json()).catch((error) => { console.log(error) })
-    requisition.then((data) => {
+async function callPokemon(pokemon) {
+     await fetch(url + pokemon).then(response => response.json()).catch((error) => { console.log(error) }).then((data) => {
         nome.innerHTML = "Nome: " + data.name;
         let types = [];
         let abilities = [];

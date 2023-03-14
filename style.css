@@ -37,6 +37,7 @@ body {
     color: #fff;
 }
 
+
 .container-sub {
     display: flex;
     width: 100%;
@@ -145,8 +146,9 @@ body {
     border: none;
     outline: none;
     padding: 5px;
-    
+    text-transform: lowercase;
 }
+
 
 .btn {
     width: 50%;

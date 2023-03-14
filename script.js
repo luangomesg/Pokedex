@@ -28,7 +28,7 @@ btn.addEventListener("click", () => {
 
 
 async function callPokemon(pokemon) {
-     await fetch(url + pokemon).then(response => response.json()).catch((error) => { console.log(error) }).then((data) => {
+     const data = await fetch(url + pokemon).then(response => response.json()).catch((error) => { console.log(error) })
         nome.innerHTML = "Nome: " + data.name;
         let types = [];
         let abilities = [];
@@ -52,7 +52,7 @@ async function callPokemon(pokemon) {
         speed.innerHTML = "SPEED: " + data.stats[5].base_stat;
         
         
-    })
+    
     
 }
 

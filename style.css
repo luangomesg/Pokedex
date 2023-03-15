@@ -146,7 +146,11 @@ body {
     border: none;
     outline: none;
     padding: 5px;
-    text-transform: lowercase;
+}
+
+.input::placeholder {
+    color: #000;
+    
 }
 
 
@@ -186,6 +190,7 @@ body {
     .input {
         padding: 2px;
     }
+
     .btn {
         padding: 2px;
     }

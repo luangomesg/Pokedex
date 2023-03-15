@@ -14,10 +14,15 @@ let sdef = document.querySelector(".sdef");
 let speed = document.querySelector(".speed");
 let btnShiny = document.querySelector(".btn-shiny");
 
+document.addEventListener('keydown', function( event ) {
+    let flag = event.getModifierState && event.getModifierState('CapsLock');
+    if(flag) alert("Utilize apenas letras minusculas para escrever o nome dos pokemons")
+  });
+
 
 btn.addEventListener("click", () => {
     
-    let pokemon = input.value;
+    let pokemon = input.value
     callPokemon(pokemon)
     input.value = "";
 })
